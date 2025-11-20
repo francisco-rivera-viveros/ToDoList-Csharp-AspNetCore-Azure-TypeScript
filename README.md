@@ -1,8 +1,8 @@
-# ToDoList-Csharp-AspNetCore-Azure-TypeScript
+# 🚀 ToDoList-Csharp-AspNetCore-Azure-TypeScript
 Hey guys this is a project I've been working on and learning a lot from it basically consist in a to do list app that you know it can remind you about stuff you have to do I intentionally and specifically wanted it to use this tech stack (to learn about it) that includes Typescript via node.js, C# ASP.NETCORE , Azure and Azure SQL.
 
 
-# 🚀 Enterprise TaskFlow: Cloud-Native Task Manager
+
 
 ![Azure](https://img.shields.io/badge/azure-%230072C6.svg?style=for-the-badge&logo=microsoftazure&logoColor=white)
 ![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
