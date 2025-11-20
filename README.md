@@ -58,6 +58,23 @@ Here is a high-level architecture diagram that illustrates these components:
 ![Azure Architecture Diagram](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/images/compute-decision-tree.png)
 *(Note: This is a conceptual representation of the Azure PaaS services used).*
 
+graph TD
+    User(👤 User / Browser)
+    
+    subgraph "☁️ Azure Cloud Environment"
+        style Front fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+        style Back fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+        style DB fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
+
+        Front[🖥️ Frontend <br/> TypeScript + Vite <br/> <i>(Azure App Service)</i>]
+        Back[⚙️ Backend API <br/> .NET 8 Core <br/> <i>(Azure App Service)</i>]
+        DB[(🗄️ Database <br/> Azure SQL <br/> <i>(PaaS)</i>)]
+    end
+
+    User -->|HTTPS / JSON| Front
+    Front -->|REST API Fetch| Back
+    Back -->|Entity Framework Core| DB
+
 ---
 
 ## ✅ Prerequisites
