@@ -55,9 +55,6 @@ This application utilizes the following Azure resources:
 
 Here is a high-level architecture diagram that illustrates these components:
 
-![Azure Architecture Diagram](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/images/compute-decision-tree.png)
-*(Note: This is a conceptual representation of the Azure PaaS services used).*
-
 ```mermaid
 graph TD
     User(👤 User / Browser)
@@ -76,7 +73,7 @@ graph TD
     Front -->|REST API Fetch| Back
     Back -->|Entity Framework Core| DB
 ```
-
+*(Note: This is a conceptual representation of the Azure PaaS services used).*
 ---
 
 ## ✅ Prerequisites
