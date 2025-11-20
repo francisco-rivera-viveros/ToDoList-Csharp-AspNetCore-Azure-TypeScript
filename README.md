@@ -30,7 +30,7 @@ This project is not just a "To-Do List"; it is a technical proof of concept desi
 
 ## 🖼️ Application Preview
 
-![Screenshot of the deployed App](PON_AQUI_EL_LINK_DE_TU_FOTO_O_SCREENSHOT)
+![demo todo list app](https://github.com/user-attachments/assets/b47b610c-43b5-4caa-8aad-e4b5367e57ce)
 
 ---
 
