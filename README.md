@@ -9,7 +9,7 @@ Hey guys this is a project I've been working on and learning a lot from it basic
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 ![SQL Server](https://img.shields.io/badge/sql%20server-CC2927?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white)
 
-> **🔴 LIVE DEMO:** [👉 Click here to view the App running on Azure](AQUI_PON_TU_LINK_DE_AZURE)
+> **🔴 LIVE DEMO:** [👉 Click here to view the App running on Azure](https://todoapp-franc-frontend-hbe9dpapd4awbcfz.mexicocentral-01.azurewebsites.net/)
 
 > **⚠️ IMPORTANT NOTE ON LOAD TIMES (Cold Start):**
 > Because this project is hosted on the **Azure Free Tier**, the App Service and SQL Database scale down to a "hibernation" mode after periods of inactivity to conserve cloud resources.
