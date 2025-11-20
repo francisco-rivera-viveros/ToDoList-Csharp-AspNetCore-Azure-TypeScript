@@ -67,14 +67,15 @@ graph TD
         style Back fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
         style DB fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
 
-        Front[🖥️ Frontend <br/> TypeScript + Vite <br/> <i>(Azure App Service)</i>]
-        Back[⚙️ Backend API <br/> .NET 8 Core <br/> <i>(Azure App Service)</i>]
-        DB[(🗄️ Database <br/> Azure SQL <br/> <i>(PaaS)</i>)]
+        Front["🖥️ Frontend <br/> TypeScript + Vite <br/> <i>(Azure App Service)</i>"]
+        Back["⚙️ Backend API <br/> .NET 8 Core <br/> <i>(Azure App Service)</i>"]
+        DB[("🗄️ Database <br/> Azure SQL <br/> <i>(PaaS)</i>")]
     end
 
     User -->|HTTPS / JSON| Front
     Front -->|REST API Fetch| Back
     Back -->|Entity Framework Core| DB
+```
 
 ---
 
@@ -96,5 +97,7 @@ Follow these steps to get the application up and running on your local machine.
 ### 1. Clone the Repository
 ```bash
 git clone [https://github.com/francisco-rivera-viveros/ToDoList-Csharp-AspNetCore-Azure-TypeScript.git](https://github.com/francisco-rivera-viveros/ToDoList-Csharp-AspNetCore-Azure-TypeScript.git)
+
+
 
 
