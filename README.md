@@ -75,7 +75,7 @@ graph TD
     User -->|HTTPS / JSON| Front
     Front -->|REST API Fetch| Back
     Back -->|Entity Framework Core| DB
-````
+```
 ---
 
 ## ✅ Prerequisites
