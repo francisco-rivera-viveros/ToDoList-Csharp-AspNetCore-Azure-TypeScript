@@ -19,6 +19,9 @@ Hey guys this is a project I've been working on and learning a lot from it basic
 > **🔴 LIVE DEMO:** [👉 Click here to view the App running on Azure](https://todoapp-franc-frontend-hbe9dpapd4awbcfz.mexicocentral-01.azurewebsites.net/)
 ---
 
+![demo todo list app](https://github.com/user-attachments/assets/b47b610c-43b5-4caa-8aad-e4b5367e57ce)
+
+
 ## 📋 Project Overview
 
 A blueprint for a full-stack web application built with **TypeScript (React/Vite)** and a **.NET 8 (C#) API**, running on **Azure App Service** and backed by an **Azure SQL Database**.
