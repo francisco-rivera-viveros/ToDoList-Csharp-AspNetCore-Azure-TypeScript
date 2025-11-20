@@ -30,7 +30,8 @@ This project is not just a "To-Do List"; it is a technical proof of concept desi
 
 ## 🖼️ Application Preview
 
-![demo todo list app](https://github.com/user-attachments/assets/b47b610c-43b5-4caa-8aad-e4b5367e57ce)
+![demo todo list app iphone](https://github.com/user-attachments/assets/131b5fde-41d7-4aee-bef1-a23ef735a75e)
+
 
 ---
 
