@@ -1,0 +1,4 @@
+{
+    "dotnet.defaultSolution": "ToDoList.sln",
+    "appService.showBuildDuringDeployPrompt": false
+}

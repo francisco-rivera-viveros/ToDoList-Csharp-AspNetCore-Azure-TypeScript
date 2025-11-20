@@ -1,0 +1,233 @@
+/* --- 1. Reseteo y Modo Oscuro Global --- */
+body {
+  /* Usamos la pila de fuentes "de sistema" para que se vea nativo */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Colores base de la app de Apple */
+  background-color: #1c1c1e; /* Tono de gris oscuro de Apple */
+  color: #f0f0f0;           /* Texto claro */
+
+  /* Quita márgenes feos */
+  margin: 0;
+
+  display: flex;
+  flex-direction: column; /* Pone los elementos en columna (header arriba, lista abajo) */
+  min-height: 100vh;
+}
+
+/* --- 2. Estilo del Header (la 'Toolbar') --- */
+.app-header {
+  /* La magia del layout moderno: Flexbox */
+  display: flex;
+
+  /* Esto pone el título a la izquierda y el botón a la derecha */
+  justify-content: space-between;
+
+  /* Esto los centra verticalmente */
+  align-items: center;
+
+  /* Espaciado interno */
+  padding: 16px 24px;
+
+  /* La línea divisoria sutil que tiene la app de Apple */
+  border-bottom: 1px solid #3a3a3c;
+}
+
+.app-title {
+  /* Hacemos el título más grande y bold */
+  font-size: 28px;
+  font-weight: bold;
+
+  /* Quitamos el margen que los <h1> traen por defecto */
+  margin: 0;
+}
+
+/* --- 3. El Botón Naranja '+' --- */
+.add-button {
+  /* ¡El color naranja icónico! */
+  background-color: #f5a623;
+  color: white; /* El color del símbolo '+' */
+
+  font-size: 24px;   /* Tamaño del '+' */
+  font-weight: 300;  /* Un poco más delgado */
+  line-height: 32px; /* Ayuda a centrar el '+' verticalmente */
+
+  border: none; /* Sin bordes feos */
+
+  /* ¡La magia para hacerlo un círculo! */
+  width: 32px;
+  height: 32px;
+  border-radius: 50%; /* 50% de 32px = círculo perfecto */
+
+  cursor: pointer; /* Manito al pasar por encima */
+
+  /* Transición suave para el hover */
+  transition: background-color 0.2s ease;
+}
+
+.add-button:hover {
+  /* Un naranja un poco más oscuro al pasar el mouse */
+  background-color: #d8901e;
+}
+
+/* --- 4. Contenedor de la Lista --- */
+.list-container {
+  /* Añadimos padding para que la lista no esté pegada a los bordes */
+  padding: 0 24px;
+  flex-grow: 1; /*
+}
+
+/* Quitamos el estilo feo de la lista (los puntitos) */
+#task-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none; /* Adiós a los 'bullets' */
+}
+
+/* --- 5. Estilo del Item de Tarea Individual (.task-item) --- */
+
+/* Este es el <li> que renderizamos en TS.
+  Vamos a usar flexbox de nuevo para alinear el checkbox y los detalles.
+*/
+.task-item {
+  display: flex;
+  align-items: flex-start; /* Alinear al inicio (para las notas) */
+
+  /* La línea divisoria sutil entre cada tarea */
+  border-bottom: 1px solid #3a3a3c;
+  padding: 12px 0; /* Espacio vertical */
+}
+
+/* --- 6. El Checkbox Circular (¡La parte divertida!) --- */
+
+/* Para estilizar un checkbox, tenemos que ocultar el 
+  cuadrado feo y crear nuestro propio círculo.
+*/
+.task-item input[type="checkbox"] {
+  /* 1. Ocultamos el checkbox original */
+  appearance: none; /* Adiós al estilo del navegador */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* 2. Definimos el tamaño de nuestro nuevo "círculo" */
+  width: 22px;
+  height: 22px;
+  margin: 0; /* Quitamos márgenes */
+
+  /* 3. Creamos el círculo */
+  background-color: transparent; /* Fondo transparente */
+  border: 2px solid #555;      /* Borde gris */
+  border-radius: 50%;          /* ¡Círculo! */
+
+  cursor: pointer;
+  margin-right: 12px; /* Espacio entre el círculo y el texto */
+  margin-top: 2px;    /* Ajuste visual */
+}
+
+/* --- 7. El Input del Título (¡Adiós al fondo blanco!) --- */
+
+.task-title {
+  /* 1. ¡Quitamos todos los estilos feos del input! */
+  background: none;
+  border: none;
+  outline: none; /* Sin borde azul al hacer clic */
+
+  /* 2. Le damos el estilo de fuente de Apple */
+  font-size: 16px;
+  color: #f0f0f0; /* Texto claro */
+
+  /* 3. Hacemos que ocupe todo el ancho posible */
+  width: 100%;
+}
+
+/* --- 8. Los Detalles (Título y Notas) --- */
+
+.task-details {
+  display: flex;
+  flex-direction: column; /* Título encima de las notas */
+  flex-grow: 1; /* Ocupa el resto del espacio */
+}
+
+.task-notes {
+  font-size: 14px;
+  color: #8e8e93; /* Gris sutil para las notas */
+  margin-top: 4px;
+}
+
+/* --- 9. Toques de color de Apple --- */
+
+/* El título "Recordatorios" en naranja */
+.app-title {
+  color: #f5a623; /* Naranja */
+}
+
+/* --- 10. Estilo del Checkbox MARCADO --- */
+
+/* Esto se activa cuando el <input> tiene el atributo "checked" */
+.task-item input[type="checkbox"]:checked {
+  /* Hacemos el fondo y el borde del mismo color */
+  background-color: #f5a623;
+  border-color: #f5a623;
+
+  /* Animación suave */
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Vamos a crear la "palomita" (check) blanca 
+  usando un pseudo-elemento ::before
+*/
+.task-item input[type="checkbox"]:checked::before {
+  content: '✔'; /* Este es el símbolo de la palomita */
+
+  /* Centrado y estilo */
+  display: block;
+  color: #1c1c1e; /* Color del fondo (oscuro) */
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 20px; /* Ajusta esto para centrarlo verticalmente */
+}
+
+
+/* --- 11. Estilo del Texto de Tarea Completada --- */
+
+/* Este es un "selector de hermano general" (~).
+  Le dice al CSS: "Busca un checkbox que esté :checked..."
+*/
+
+/* "...luego, busca a su 'hermano' .task-details que está después..." */
+/* --- 11. Estilo del Texto de Tarea Completada (CORREGIDO) --- */
+
+/* Esto es mucho más simple. 
+  "Cuando el .task-item TENGA la clase .task-completed..."
+*/
+.task-item.task-completed .task-title {
+  /* "...aplica estos estilos al .task-title que está adentro." */
+
+  color: #8e8e93; /* ¡El color gris sutil! */
+  text-decoration: line-through; /* ¡Y lo tachamos! */
+
+  /* Animación suave para el cambio de color */
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+/* Y hacemos lo mismo para las notas */
+.task-item.task-completed .task-notes {
+  color: #555; /* Un gris aún más oscuro */
+  text-decoration: line-through;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+/* --- 12. Mensaje de Lista Vacía --- */
+.empty-message {
+  display: block; /* Para que ocupe su propia línea */
+  text-align: center; /* Centrar el texto */
+
+  color: #8e8e93; /* El color gris tenue que usas en otros lados */
+  font-size: 16px; /* Tamaño de fuente */
+
+  margin-top: 50px; /* Separarlo del título Recordatorios */
+
+  /* Aseguramos que no se vea si la lista tiene elementos */
+  display: none; 
+}
